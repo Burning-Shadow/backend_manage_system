@@ -23,15 +23,14 @@ H-ui一直秉承“不求多炫，实用为主！”的宗旨,为广大工程师
 ├── login.html				管理员登陆
 ├── index.html				首页(主框架)
 ├── welcome.html				我的桌面（默认永远打开的页面）
-├── member-开头的				用户相关
-├── artice-开头的				资讯相关
+├── **aboutus-开头的**				**关于我们相关**
+├── **acti-开头的**				**活动相关**
 ├── picture-开头的				图片相关
 ├── product-开头的				产品相关
-├── page-开头的				页面相关
 ├── system-开头的				系统相关
 ├── admin-开头的				管理员相关
-├── charts-开头的				统计相关
-			……
+
+├── charts-开头的				统计相关			……
 static/	资源
 
 ├── h-ui/			H-ui特有资源
