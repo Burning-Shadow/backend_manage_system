@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .input-list {
+        width: 700px;
+        margin: 50px auto 0 auto;
+      }
+      .input-item {
+        margin: 10px auto;
+        overflow: hidden;
+        font-size: 20px;
+      }
+      .input-item .side {
+        float: left;
+      }
+      .input-item .left-side {
+        width: 200px;
+        text-align: right;
+      }
+      .input-item .right-side {
+        width: 500px;
+      }
+      .input-item .right-side .input {
+        outline-style: none;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        padding: 4px 4px;
+        min-width: 200px;
+        width: 400px;
+        font-size: 16px;
+        font-family: "Microsoft soft";
+      }
+      .input-item .btn {
+        margin: 0 auto;
+        width: 300px;
+        height: 40px;
+        background-color: red;
+        color: white;
+        font-size: 20px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input-list">
+      <div class="input-item">
+        <div class="left-side side">
+          CEO姓名：
+        </div>
+        <div class="right-side side">
+          <input class="input" type="text" />
+        </div>
+      </div>
+
+      <div class="input-item">
+        <div class="left-side side">
+          职位：
+        </div>
+        <div class="right-side side">
+          <input class="input" type="text" />
+        </div>
+      </div>
+
+      <div class="input-item">
+        <div class="left-side side">
+          照片(矩形照片)：
+        </div>
+        <div class="right-side side">
+          <input type="file" />
+        </div>
+      </div>
+
+      <div class="input-item">
+        <div class="left-side side">
+          寄语：
+        </div>
+        <div class="right-side side">
+          <textarea class="input" rows="3" cols="20"></textarea>
+        </div>
+      </div>
+
+      <div class="input-item">
+        <div class="btn">Submit</div>
+      </div>
+    </div>
+  </body>
+</html>
