@@ -32,7 +32,44 @@ H-ui一直秉承“不求多炫，实用为主！”的宗旨,为广大工程师
 ├── admin-开头的				管理员相关
 
 ├── charts-开头的				统计相关			……
+
+
+===============================================================================
 static/	资源
+
+├── aboutus/			关于我们页特有资源
+│    ├── css/			样式
+│    │    ├── 
+│    │    ├── 
+│    │    ├── 
+│    ├── images/			图片资源
+│    ├── js/
+│    │    ├── 
+├── activities/			活动页特有资源
+│    ├── css/			样式
+│    │    ├── acti-exhibition-activities.css	展会活动样式表
+│    │    ├── acti-hospital-activities.css		医院活动样式表 <暂无>
+│    │    ├── acti-international-exchange.css	国际交流样式表 <暂无>
+│    ├── images/			图片资源
+│    ├── js/
+│    │    ├── acti-exhibition-activities.js		展会活动脚本 <暂无>
+│    │    ├── acti-hospital-activities.js		医院活动脚本 <暂无>
+│    │    ├── acti-international-exchange.js	国际交流脚本 <暂无>
+├── products/			产品页特有资源
+│    ├── css/			样式
+│    │    ├── 
+│    │    ├── 
+│    │    ├── 
+│    ├── images/			图片资源
+│    ├── js/			脚本
+│    │    ├── 
+├── public/			关于我们页特有资源
+│    ├── css/			样式
+│    │    ├── public.css			公共基础样式
+│    ├── js/
+│    │    ├── util.js				工具脚本
+
+======================== 这之下的是人家原本自带的脚本 ========================
 
 ├── h-ui/			H-ui特有资源
 │    ├── css/			样式
@@ -56,6 +93,10 @@ static/	资源
 │    │    ├── orange			橙色
 │    │    ├── red				红色
 │    │    ├── yellow			黄色
+
+
+===============================================================================
+
 Lib/	第三方插件
 ├── jquery					jQuery类库（v1.9.1）
 ├── Hui-iconfont				阿里图标字体库（H-ui定制）
