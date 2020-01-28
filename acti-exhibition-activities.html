@@ -1,12 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  exhibition-activities
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="static/activities/css/acti-exhibition-activities.css"
+    />
+    <link rel="stylesheet" href="static/public/css/public.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="block">
+        <div class="item">
+          <span class="left-side">姓名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+          ><span class="right-side"
+            ><input class="input" name="name" type="text"
+          /></span>
+        </div>
+        <div class="item">
+          <span class="left-side">公司&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+          ><span class="right-side"
+            ><input class="input" name="company" type="text"
+          /></span>
+        </div>
+        <div class="item">
+          <span class="left-side">照片&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+          ><span class="right-side"
+            ><input class="input" name="photo" type="file"
+          /></span>
+        </div>
+        <div class="item">
+          <span class="left-side">职位&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+          ><span class="right-side"
+            ><input class="input" name="position" type="text"
+          /></span>
+        </div>
+        <div class="item">
+          <span class="left-side">时间段&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+          ><span class="right-side"
+            ><input
+              class="input"
+              name="time-quantum"
+              placeholder="格式诸如 2011.9.12 09:00 - 10:00"
+              type="text"
+          /></span>
+        </div>
+        <div class="item">
+          <span class="left-side">活动名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+          ><span class="right-side"
+            ><input class="input" name="acti-name" type="text"
+          /></span>
+        </div>
+        <div class="item">
+          <span class="left-side">描述&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+          ><span class="right-side"
+            ><textarea class="input" name="desc" cols="30" rows="5"></textarea
+          ></span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div id="add-block">添加模块</div>
+      </div>
+
+      <div class="table">
+        <table width="90%">
+          <caption>
+            <h2>
+              活动列表
+            </h2>
+          </caption>
+          <thead>
+            <tr>
+              <th>
+                姓名
+              </th>
+              <th>
+                公司
+              </th>
+              <th>
+                照片
+              </th>
+              <th>
+                职位
+              </th>
+              <th>
+                时间段
+              </th>
+              <th>
+                活动名
+              </th>
+              <th>
+                描述
+              </th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+
+      <div class="item">
+        <div id="submit">提交</div>
+      </div>
+    </div>
+    <script src="static/activities/js/add-block.js"></script>
+    <script src="static/public/js/utils.js"></script>
+    <script>
+      var tableData = [],
+        newData;
+      document
+        .getElementById("add-block")
+        .addEventListener("click", function() {
+          var itemList = document.getElementsByClassName("input");
+
+          var newData = getNewData(itemList);
+
+          // TODO: 创建表格映射，将 newData 中的数据以此映射至表格中
+          // TODO: 关于图片（照片）是以 base64 编码形式存储，后台索要数据直接发送即可，展示时候 以 <img src="data:image/png;base64,iVBORw0KGg5sAAAAASUVORK5CYII=....."> 格式展示即可
+        });
+
+      // tableData.push(newData);
+      // console.log(tableData);
+    </script>
+  </body>
 </html>
