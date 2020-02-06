@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="static/activities/css/acti-exhibition-activities.css"
+    />
+    <link rel="stylesheet" href="./static/public/css/public.css" />
+    <style>
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="item">
+        <span class="left-side">分类名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+        ><span class="right-side"
+          ><input class="input" name="name" type="text"
+        /></span>
+      </div>
+      <div class="item">
+        <span class="left-side">分类描述&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+        ><span class="right-side"
+          ><input class="input" name="desc" type="text"
+        /></span>
+      </div>
+      <div class="item">
+        <span class="left-side">分类图片&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+        ><span class="right-side"
+          ><input class="input" name="picture" type="file"
+        /></span>
+      </div>
+      <div class="item">
+        <div style="width: 180px; margin: 0 auto;">
+          <div class="btn" onclick="clear">清空</div>
+          <div class="btn" onclick="update">新增</div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js" />
+    <script>
+      function clear() {
+        var dataList = document.getElementsByClassName("input");
+        dataList = dataList.map(item => {
+          return "";
+        });
+      }
+
+      function update() {
+        var dataList = document.getElementsByClassName("input");
+      }
+    </script>
+  </body>
+</html>

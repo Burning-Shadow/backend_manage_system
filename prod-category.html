@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/public/css/public.css" />
+    <style>
+      .header-bar {
+        border: 1px solid #666;
+        border-radius: 5px;
+        margin: 20px auto;
+        padding: 10px 30px;
+        width: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <div class="header-bar">
+        科室名: 
+        <select>
+          <option value ="1">消毒供应中心</option>
+          <option value ="2">院感管理科</option>
+          <option value="3">手术室</option>
+          <option value="4">口腔医院&诊所</option>
+          <option value="5">解决方案</option>
+        </select>
+        <div class="btn warning right">
+          <a
+            href="javascript:;"
+            onclick="openLayer(row)"
+            >新增分类</a
+          >
+        </div>
+        <div class="btn primary right" onclick="searchCategories">搜索</div>
+      </div>
+      <div class="content-detail">
+        <table width="90%">
+          <caption>
+            <h2>
+              分类列表
+            </h2>
+          </caption>
+          <thead>
+            <tr>
+              <th>
+                分类ID
+              </th>
+              <th>
+                分类名
+              </th>
+              <th>
+                描述
+              </th>
+              <th>
+                操作
+              </th>
+            </tr>
+          </thead>
+          <tr>
+            <td>
+              11
+            </td>
+            <td>
+              医用清洗剂
+            </td>
+            <td>
+              医疗器具消毒所用，快速杀菌
+            </td>
+            <td>
+              <div class="btn">
+                <a
+                  href="javascript:;"
+                  onclick="openLayer(row)"
+                  >修改</a
+                >
+              </div>
+              <div class="btn">
+                <a
+                  href="javascript:;"
+                  onclick="deleteCategory(row)"
+                  >删除</a
+                >
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              12
+            </td>
+            <td>
+              存储
+            </td>
+            <td>
+              仓库租赁
+            </td>
+            <td>
+              <div class="btn">
+                <a
+                  href="javascript:;"
+                  onclick="openLayer(row)"
+                  >修改</a
+                >
+              </div>
+              <div class="btn">
+                <a
+                  href="javascript:;"
+                  onclick="deleteCategory(row)"
+                  >删除</a
+                >
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="lib/jquery/1.9.1/jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
+    <script>
+      function openLayer(title, url) {
+        var index = layer.open({
+          type: 2,
+          title: "修改科室",
+          content: "prod-department-detail.html"
+        });
+        layer.full(index);
+      }
+      deleteCategory(row) {
+        // TODO: 发送 AJAX 请求删除行
+      }
+      function searchCategories() {
+        // TODO: 获取搜索框中的 department_name
+        // TODO: 发送 AJAX 请求动态获取下方列表
+      }
+    </script>
+  </body>
+</html>
