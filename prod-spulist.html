@@ -37,28 +37,46 @@
           <option value="4">口腔医院&诊所</option>
           <option value="5">解决方案</option>
         </select>
+        分类名：<select>
+          <option value="11">医用清洗剂</option>
+          <option value="12">清洗工具</option>
+          <option value="13">转运</option>
+          <option value="14">存储</option>
+          <option value="15">器械保护</option>
+        </select>
+        产品名：<select>
+          <option value="101">红色</option>
+          <option value="102">橙色</option>
+          <option value="103">黄色</option>
+          <option value="104">绿色</option>
+          <option value="105">蓝色</option>
+        </select>
         <div class="btn warning right">
-          <a href="javascript:;" onclick="openLayer(row)">新增分类</a>
+          <a
+            href="javascript:;"
+            onclick="openLayer('查看科室详情','prod-department-detail.html')"
+            >新增货品</a
+          >
         </div>
-        <div class="btn primary right" onclick="searchCategories">搜索</div>
+        <div class="btn primary right">搜索</div>
       </div>
       <div class="content-detail">
         <table width="90%">
           <caption>
             <h2>
-              分类列表
+              货品列表
             </h2>
           </caption>
           <thead>
             <tr>
               <th>
-                分类ID
+                货品ID
               </th>
               <th>
-                分类名
+                货品规格
               </th>
               <th>
-                描述
+                货品轮播图列表
               </th>
               <th>
                 操作
@@ -73,7 +91,9 @@
               医用清洗剂
             </td>
             <td>
-              医疗器具消毒所用，快速杀菌
+              http://superbed.com/dauijea<br />
+              http://superbed.com/fdasfas<br />
+              http://superbed.com/ewrqsd<br />
             </td>
             <td>
               <div class="btn">
@@ -92,7 +112,9 @@
               存储
             </td>
             <td>
-              仓库租赁
+              http://superbed.com/dauijea<br />
+              http://superbed.com/fdasfas<br />
+              http://superbed.com/ewrqsd<br />
             </td>
             <td>
               <div class="btn">
@@ -115,17 +137,10 @@
       function openLayer(title, url) {
         var index = layer.open({
           type: 2,
-          title: "修改科室",
-          content: "prod-department-detail.html"
+          title: title,
+          content: url
         });
         layer.full(index);
-      }
-      deleteCategory(row) {
-        // TODO: 发送 AJAX 请求删除行
-      }
-      function searchCategories() {
-        // TODO: 获取搜索框中的 department_name
-        // TODO: 发送 AJAX 请求动态获取下方列表
       }
     </script>
   </body>
